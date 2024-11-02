@@ -1,0 +1,39 @@
+---
+import Layout from './Layout.astro';
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Layout title={`${title} | Alpha Gamma Omega | UC Berkeley`}>
+    <main>
+        <div class="relative h-[300px]">
+            {/* Background Image */}
+            <div class="absolute inset-0 z-0">
+                <img 
+                    src="/ago/pensieve.jpg" 
+                    alt="Background" 
+                    class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 bg-black/40"></div>
+            </div>
+          
+            {/* Content */}
+            <div class="relative z-10 py-24 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-5xl mx-auto text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white">
+                        {title}
+                    </h1>
+                </div>
+            </div>
+          </div>
+
+        <!-- Page content -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <slot />
+        </div>
+    </main>
+</Layout> 
