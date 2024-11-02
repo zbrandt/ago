@@ -15,7 +15,17 @@ import Footer from "../components/Footer.astro";
 		<title>{title}</title>
 	</head>
 	<body class="bg-gray-100">
-		<div class="max-w-7xl mx-auto bg-white">
+		<div class="mx-auto bg-white">
+			<div class="bg-gray-900 text-white text-center py-2">
+				<span class="inline-block">
+					<span class="font-semibold">Rush Fall 2024</span>
+					<span class="mx-2">•</span>
+					Join us from September 1 - September 15 for free food and drinks!
+				</span>
+				<a href="/rush" class="ml-4 inline-block bg-white text-green-600 px-5 rounded-full font-semibold hover:bg-gray-200 transition duration-150 ease-in-out">
+					Rush &rarr;
+				</a>
+			</div>
 			<Navbar />
 			<slot />
 			<Footer />
